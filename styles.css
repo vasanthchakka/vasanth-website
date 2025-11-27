@@ -10,10 +10,15 @@
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{
-  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  margin:0;color:#0f1724;background:var(--bg);line-height:1.5;
+body {
+  font-family: Inter, system-ui, Arial;
+  margin: 0;
+  color: #0f1724;
+  background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80") no-repeat center center fixed;
+  background-size: cover;
+  line-height: 1.5;
 }
+
 .container{max-width:var(--maxw);margin:0 auto;padding:28px}
 
 /* Header */
