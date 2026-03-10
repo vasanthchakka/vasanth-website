@@ -1,49 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Project Dashboard</title>
-
-<link rel="stylesheet" href="styles.css">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-</head>
-
-<body>
-
 <div class="dashboard">
 
-<div class="card big">
+<div class="card">
+<h1 id="date"></h1>
+<p id="day"></p>
+</div>
+
+<div class="card">
 <h1>13</h1>
 <p>Days since incident</p>
 </div>
 
 <div class="card">
-<h2>29</h2>
+<h1>29</h1>
 <p>Incidents this year</p>
 </div>
 
 <div class="card">
-<h2>94%</h2>
-<p>Training completion</p>
+<h1>35 kg</h1>
+<p>Plate Weight</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Steel_plate.jpg" width="100%">
 </div>
 
 <div class="card">
-<h2>24</h2>
-<p>Risk assessments pending</p>
+<h1>32 °C</h1>
+<p>Temperature</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Thermometer.jpg" width="100%">
+</div>
+
+<div class="card">
+<h1>68 %</h1>
+<p>Humidity</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Humidity_sensor.jpg" width="100%">
 </div>
 
 <div class="card chart">
-<canvas id="incidentChart"></canvas>
+<canvas id="tempChart"></canvas>
 </div>
 
 <div class="card chart">
-<canvas id="evacuationChart"></canvas>
+<canvas id="humidityChart"></canvas>
 </div>
 
 </div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
