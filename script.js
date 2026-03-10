@@ -1,64 +1,60 @@
-const ctx1 = document.getElementById('incidentChart');
+const today = new Date();
+
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+document.getElementById("date").innerHTML =
+today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
+
+document.getElementById("day").innerHTML =
+days[today.getDay()];
+
+
+// Temperature chart
+const ctx1 = document.getElementById('tempChart');
 
 new Chart(ctx1, {
 
-type: 'bar',
+type: 'line',
 
-data: {
+data:{
 
-labels: ['Jan','Feb','Mar','Apr','May','Jun'],
+labels:['6AM','9AM','12PM','3PM','6PM'],
 
-datasets: [
+datasets:[{
 
-{
+label:'Temperature',
 
-label:'Minor incidents',
+data:[26,29,32,31,28],
 
-data:[5,2,4,1,6,2],
+borderColor:'#00e5ff',
 
-backgroundColor:'#00d4ff'
+tension:0.4
 
-},
-
-{
-
-label:'Serious incidents',
-
-data:[1,0,1,0,2,0],
-
-backgroundColor:'#ffd166'
-
-}
-
-]
+}]
 
 }
 
 });
 
 
-
-const ctx2 = document.getElementById('evacuationChart');
+// Humidity chart
+const ctx2 = document.getElementById('humidityChart');
 
 new Chart(ctx2, {
 
-type: 'line',
+type:'bar',
 
 data:{
 
-labels:['Apr','Jul','Oct','Jan','Apr'],
+labels:['Morning','Noon','Evening','Night'],
 
 datasets:[{
 
-label:'Evacuation time',
+label:'Humidity',
 
-data:[150,180,220,140,150],
+data:[70,65,68,72],
 
-borderColor:'#00d4ff',
-
-fill:false,
-
-tension:0.4
+backgroundColor:'#4cafef'
 
 }]
 
